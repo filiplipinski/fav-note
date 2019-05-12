@@ -2,4 +2,4 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Paragraph from './Paragraph';
 
-storiesOf('Paragraph', module).add('Normal', () => <Paragraph>To jest paragraf</Paragraph>);
+storiesOf('Atoms/Paragraph', module).add('Normal', () => <Paragraph>To jest paragraf</Paragraph>);

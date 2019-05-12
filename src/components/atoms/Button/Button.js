@@ -6,7 +6,7 @@ const Button = styled.button`
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.note};
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 600;
