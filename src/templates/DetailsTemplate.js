@@ -1,24 +1,98 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Heading from 'components/atoms/Heading/Heading';
+import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import Button from 'components/atoms/Button/Button';
 import UserPageTemplate from 'templates/UserPageTemplate';
 import PropTypes from 'prop-types';
 
-const DetailsTemplate = ({ children, pageType }) => {
+const StyledWrapper = styled.div`
+  padding: 25px 150px 25px 70px;
+  max-width: 50vw;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    max-width: 80vw;
+  }
+`;
+
+const StyledPageHeader = styled.div`
+  margin: 25px 0 50px 0;
+`;
+
+const StyledHeading = styled(Heading)`
+  margin: 25px 0 0 0;
+
+  ::first-letter {
+    text-transform: uppercase;
+  }
+`;
+const StyledParagraph = styled(Paragraph)`
+  font-weight: ${({ theme }) => theme.bold};
+`;
+
+const StyledLink = styled.a`
+  display: block;
+  font-weight: ${({ theme }) => theme.bold};
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  color: black;
+  text-transform: uppercase;
+  margin: 20px 0 0;
+`;
+
+const StyledImage = styled.img`
+  position: absolute;
+  right: -80px;
+  top: 50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: 25px;
+`;
+
+const DetailsTemplate = ({ pageType, title, created, content, articleUrl, twitterName }) => {
   return (
     <UserPageTemplate pageType={pageType}>
-      {children}
-      <Link to={`/${pageType}`}>Go back</Link>
+      <StyledWrapper>
+        <StyledPageHeader>
+          <StyledHeading big as="h1">
+            {title}
+          </StyledHeading>
+          <StyledParagraph>created {created} ago</StyledParagraph>
+        </StyledPageHeader>
+        <Paragraph>{content}</Paragraph>
+        {pageType === 'articles' && <StyledLink href={articleUrl}>Open article</StyledLink>}
+        {pageType === 'twitters' && (
+          <StyledImage alt={title} src={`https://avatars.io/twitter/${twitterName}`} />
+        )}
+
+        <StyledButton as={Link} to={`/${pageType}`} activeColor={pageType}>
+          close / save
+        </StyledButton>
+      </StyledWrapper>
     </UserPageTemplate>
   );
 };
 
 DetailsTemplate.propTypes = {
-  children: PropTypes.element.isRequired,
-  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+  pageType: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  created: PropTypes.string,
+  content: PropTypes.string,
+  articleUrl: PropTypes.string,
+  twitterName: PropTypes.string,
 };
 
 DetailsTemplate.defaultProps = {
-  pageType: 'notes',
+  title: '',
+  created: '',
+  content: '',
+  articleUrl: '',
+  twitterName: '',
 };
 
 export default DetailsTemplate;

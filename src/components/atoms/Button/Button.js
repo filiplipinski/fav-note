@@ -3,13 +3,18 @@ import styled, { css } from 'styled-components';
 const Button = styled.button`
   width: 220px;
   height: 47px;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  background-color: ${({ activeColor, theme }) => theme[activeColor]};
   border: none;
   border-radius: 50px;
-  background-color: ${({ theme }) => theme.notes};
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-family: 'Montserrat';
   font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
 
   ${({ secondary }) =>
     secondary &&
