@@ -6,6 +6,7 @@ const Input = styled.input`
   color: black;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.regular};
+  font-family: 'Montserrat', sans-serif;
   padding: 15px 30px;
   border-radius: 50px;
   border: none;

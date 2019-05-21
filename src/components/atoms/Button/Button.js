@@ -8,7 +8,7 @@ const Button = styled.button`
   align-items: center;
   color: black;
   text-decoration: none;
-  background-color: ${({ activeColor, theme }) => theme[activeColor]};
+  background-color: ${({ activecolor, theme }) => theme[activecolor]};
   border: none;
   border-radius: 50px;
   font-family: 'Montserrat';
