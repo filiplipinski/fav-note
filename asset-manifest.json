@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/fav-note/static/js/main.9e60971d.chunk.js",
+    "main.js.map": "/fav-note/static/js/main.9e60971d.chunk.js.map",
+    "runtime~main.js": "/fav-note/static/js/runtime~main.1a8abab4.js",
+    "runtime~main.js.map": "/fav-note/static/js/runtime~main.1a8abab4.js.map",
+    "static/js/2.34aa4fb5.chunk.js": "/fav-note/static/js/2.34aa4fb5.chunk.js",
+    "static/js/2.34aa4fb5.chunk.js.map": "/fav-note/static/js/2.34aa4fb5.chunk.js.map",
+    "index.html": "/fav-note/index.html",
+    "precache-manifest.f13713e03c5e92885fbe3532bcb748fb.js": "/fav-note/precache-manifest.f13713e03c5e92885fbe3532bcb748fb.js",
+    "service-worker.js": "/fav-note/service-worker.js",
+    "static/media/bulb.svg": "/fav-note/static/media/bulb.af737b55.svg",
+    "static/media/link.svg": "/fav-note/static/media/link.6fc1d8fe.svg",
+    "static/media/logo.svg": "/fav-note/static/media/logo.93d4f3ba.svg",
+    "static/media/logout.svg": "/fav-note/static/media/logout.0969c92b.svg",
+    "static/media/magnifier.svg": "/fav-note/static/media/magnifier.a14461b8.svg",
+    "static/media/pen.svg": "/fav-note/static/media/pen.84b70f8a.svg",
+    "static/media/plus.svg": "/fav-note/static/media/plus.e43ce6c8.svg",
+    "static/media/twitter.svg": "/fav-note/static/media/twitter.051af8ba.svg"
+  }
+}
